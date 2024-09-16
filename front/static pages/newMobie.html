@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear MUBIE</title>
+    <link rel="stylesheet" href="../styles/newMobie.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>¿Queres crear una MOBIE??</h1>
+        <form id="movieForm"> <!--TODOS los datos que llegan por formulario SIEMPRE LLEGAN EN STRING por lo tanto siempre hay que PARSEARLOS EN JS-----> 
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title">
+
+            <label for="year">Año:</label>
+            <input type="number" id="year" name="year">
+
+            <label for="director">Director:</label>
+            <input type="text" id="director" name="director">
+
+            <label for="duration">Duración:</label>
+            <input type="text" id="duration" name="duration">
+
+            <label for="genre">Género: (Para mas de una opción presione Ctrl + Click)</label>
+            <div class="generos"> <!--atento aca pato-->
+            <select name="genre" id="genre" multiple>
+                <option value="comedia">Comedia</option> 
+                <option value="accion">Accion</option> 
+                <option value="suspenso">Suspenso</option> 
+                <option value="drama">Drama</option> 
+                <option value="romance">Romance</option> 
+                <option value="terror">Terror</option> 
+            </select>
+            </div>
+
+            <label for="rate">Puntuación:</label>
+            <input type="number" id="rate" name="rate">
+
+            <label for="poster">URL de imagen:</label>
+            <input type="url" id="poster" name="poster">
+
+            <div class="button-container">
+                <button type="submit" id="enviar">Enviar</button> <!--aca se creo un INPUT en clase-->
+                <button type="button" id="vaciar">Vaciar</button>
+                <a href="../index.html"><button type="button">Mobies</button></a>
+            </div>
+        </form>
+    </div>
+    <script src="../public/addMovie.bundle.js"></script><!--Aca importamos el script correspondiente, pero en caso de que quisiera dividir responsabilidades y hacerlo BIEN
+    deberia tener por un lado la funcionalidad para capturar la informacion y por otro lado la funcionalidad de para enviar esa info por lo tanto si o si necesitariamos el bundle-->
+</body>
+</html>
